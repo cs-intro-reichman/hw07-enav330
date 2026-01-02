@@ -3,9 +3,11 @@ public class Binomial {
         // ... code ...
     }
 
+    // Computes the Binomial function, basic version.
     public static int binomial1(int n, int k) { 
-        // ... implementation of binomial1 ...
-        return 0; // (Your implementation here)
+        if (k > n) return 0;
+        if (k == 0 || k == n) return 1;
+        return binomial1(n - 1, k - 1) + binomial1(n - 1, k);
      }
     
     // 1. שינינו את הערך המוחזר ל-long
